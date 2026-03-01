@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Aquaristikfreunde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e6f4f1;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #004d40;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 50px;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1524704796725-9fc3044a58b2') no-repeat center;
+            background-size: cover;
+            color: white;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        button {
+            background: #00796b;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #004d40;
+        }
+
+        footer {
+            background: #004d40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aquaristikfreunde</h1>
+    <p>Dein Online-Marktplatz für Zierfische</p>
+</header>
+
+<nav>
+    <a href="#start">Start</a>
+    <a href="#fische">Fische kaufen</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section class="hero" id="start">
+    <h2>Willkommen bei Aquaristikfreunde</h2>
+    <p>Hier findest du gesunde und wunderschöne Zierfische für dein Aquarium.</p>
+</section>
+
+<section class="container" id="fische">
+    <h2>Unsere Fische</h2>
+    <div class="products">
+        
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Guppy">
+            <h3>Guppy</h3>
+            <p>Bunte, lebhafte Fische – perfekt für Anfänger.</p>
+            <p class="price">3,99 €</p>
+            <button onclick="addToCart('Guppy')">In den Warenkorb</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1520301255226-bf5f144451c1" alt="Neonsalmler">
+            <h3>Neonsalmler</h3>
+            <p>Leuchtende Schwarmfische für Gesellschaftsbecken.</p>
+            <p class="price">2,49 €</p>
+            <button onclick="addToCart('Neonsalmler')">In den Warenkorb</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1508186225823-0963cf9ab0de" alt="Skalar">
+            <h3>Skalar</h3>
+            <p>Elegante Blickfänger für größere Aquarien.</p>
+            <p class="price">12,99 €</p>
+            <button onclick="addToCart('Skalar')">In den Warenkorb</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: info@aquaristikfreunde.de</p>
+    <p>Telefon: 01234 567890</p>
+</section>
+
+<footer>
+    <p>© 2026 Aquaristikfreunde – Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+    function addToCart(fish) {
+        alert(fish + " wurde dem Warenkorb hinzugefügt!");
+    }
+</script>
+
+</body>
+</html>
